@@ -1,0 +1,85 @@
+.header
+  background: #c8b485
+  height: 60px
+  .top-menu
+    float: left
+    height: 100%
+    .main-menu
+      display: block
+      float: left
+      position: relative
+      width: 70px
+      height: 60px
+      border-right: 1px solid $color2
+      &:hover
+        background-color: $color16
+        cursor: pointer
+        .hamburger
+          margin: 18px 20px
+          .line
+            margin-bottom: 7px
+      .hamburger
+        width: 30px
+        height: 23px
+        margin: 20px
+        .line
+          width: 100%
+          height: 3px
+          margin-bottom: 5px
+          background: $color3
+    ul.top-links
+      float: left
+      height: 100%
+      padding: 0
+      margin: 0
+      li
+        list-style: none
+        float: left
+        border-right: 1px solid $color2
+        height: 100%
+        .link
+          position: relative
+          height: 100%
+          line-height: 60px
+          padding: 18px  28px 18px  57px
+          text-decoration: none
+          color: $color1
+          font-size: 18px
+          font-weight: 500
+          &:before
+            content: ""
+            position: absolute
+            top: 50%
+            left: 25px
+            margin-top: -8px
+            background: url(../images/inoculars.png) center center no-repeat
+            width: 20px
+            height: 14px
+          &:hover
+            font-weight: bold
+            background-color: $color16
+            padding: 18px  22px 18px  57px
+  .right-links
+    height: 100%
+    float: right
+    .share-sign
+      float: left
+      height: 100%
+      padding: 20px
+      color: $color3
+    .facebook
+      float: left
+      background: url(../images/facebook.png) center center no-repeat
+      height: 100%
+      width: 34px
+      margin-right: 15px
+      &:hover
+        opacity: 0.8
+    .twitter
+      float: left
+      background: url(../images/twitter.png) center center no-repeat
+      height: 100%
+      width: 34px
+      margin-right: 20px
+      &:hover
+        opacity: 0.8

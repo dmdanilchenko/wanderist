@@ -1,0 +1,155 @@
+.page-details
+  font-family: "Open Sans", sans-serif
+  #wrapper
+    height: calc(100vh - 160px)
+    .sidebar-wrapper
+      position: relative
+      float: left
+      width: 560px
+      height: 100%
+      box-sizing: border-box
+      margin-left: 0
+      -moz-transition: margin-left 0.3s ease-in
+      -o-transition: margin-left 0.3s ease-in
+      -webkit-transition: margin-left 0.3s ease-in
+      transition: margin-left 0.3s ease-in
+      border-right: none
+      a.toggle-sidebar
+        position: absolute
+        top: 33px
+        right: -35px
+        z-index: 1
+        background-color: $color10
+        border-top-right-radius: 6px
+        border-bottom-right-radius: 6px
+        padding: 7px 11px 8px 14px
+        display: inline-block
+        box-shadow: rgba(223, 196, 10, 0.8) 0px 2px 1px
+      .sidebar
+        height: 100%
+        background-color: $color17
+        padding: 40px 38px
+        overflow: auto
+        box-sizing: border-box
+        .date-wrapper
+          margin-bottom: 30px
+          >a
+            margin-top: 5px
+            text-decoration: none
+            color: inherit
+            font: normal normal normal 20px/1 FontAwesome
+            &.arrow-prev
+              margin-left: 5%
+              &:before
+                content: "\f104"
+            &.arrow-next
+              margin-right: 5%
+              &:before
+                content: "\f105"
+          ul.date-select
+            width: 75%
+            margin: 0 auto
+            li
+              list-style: none
+              float: left
+              width: 33.33333%
+              box-sizing: border-box
+              a
+                display: block
+                font-size: 14px
+                font-weight: 400
+                color: $color1
+                line-height: 28px
+                border: 1px solid $color10
+                background-color: $color4
+                text-align: center
+                &.date-1
+                  border-top-left-radius: 5px
+                  border-bottom-left-radius: 5px
+                &.date-2
+                  border-right: none
+                  border-left: none
+                &.date-3
+                  border-top-right-radius: 5px
+                  border-bottom-right-radius: 5px
+                &.active
+                  background-color: $color10
+        .event
+          background-color: $color4
+          border: 1px solid $color6
+          border-radius: 10px
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1)
+          padding: 20px 0
+          .event-top
+            padding: 0 18px 0px 40px
+            .header
+              float: left
+              background: none
+              .title
+                font-size: 20px
+                font-weight: 400
+                color: $color1
+                position: relative
+              .address
+                font-size: 14px
+                font-weight: 400
+                color: $color18
+                margin-top: 10px
+            .time
+              float: right
+              font-size: 14px
+              font-weight: 400
+              color: $color1
+              font: normal normal normal 16px/1 FontAwesome
+              &:before
+                content: "\f017"
+          .image
+            width: 100%
+            height: 260px
+            margin-top: 25px
+            background: url(../images/dish.png) center center no-repeat
+            background-size: cover
+          .description
+            font-size: 14px
+            font-weight: 400
+            color: $color1
+            margin: 20px 20px 0
+            line-height: 16px
+          .show-more
+        .transport
+          width: 40px
+          height: 40px
+          background-color: $color4
+          border: 1px solid $color10
+          border-radius: 20px
+          display: inline-block
+          text-align: center
+          position: relative
+          margin: 20px 0
+          &:before
+            content: ""
+            position: absolute
+            width: 1px
+            height: 20px
+            background-color: $color10
+            top: -20px
+            left: 50%
+          &:after
+            content: ""
+            position: absolute
+            width: 1px
+            height: 20px
+            background-color: $color10
+            bottom: -20px
+            left: 50%
+          > div
+            font: normal normal normal 14px/1 FontAwesome
+            line-height: 38px
+          &.taxi
+            &:before
+              content: "\f1b9"
+          &.bus
+            &:before
+              content: "\f207"
+      .map-wrapper
+        #map

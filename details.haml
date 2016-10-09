@@ -1,0 +1,47 @@
+!!!5
+%html
+  = Haml::Engine.new(File.read('./includes/head.haml')).render(Object.new, :title=>"Главная страница")
+  %body.page-details
+    = Haml::Engine.new(File.read('./includes/header.haml')).render
+    #wrapper
+      .sidebar-wrapper
+        %a.toggle-sidebar{:href => "#"}
+        .sidebar
+          .date-wrapper
+            %a.arrow-prev{:href => "#"}
+            %ul.date-select
+              %li
+                %a.date-1.active{:href => "#"} Jun 24
+              %li
+                %a.date-2{:href => "#"} Jun 25
+              %li
+                %a.date-3{:href => "#"} Jun 26
+            %a.arrow-next{:href => "#"}
+          .event
+            .event-top
+              .header
+                .title Trattoria Da Ropeton
+                .address Via Fontana del Ferro, 1, Verona, Italy
+              .time 10.00
+            .image
+            .description Amazing owner who sings and serves the food himself! Experience which you'll never forget and will include to the travel different mockups :)
+            .show-more
+          .transport
+            .taxi
+          .event
+            .event-top
+              .header
+                .title Trattoria Da Ropeton
+                .address Via Fontana del Ferro, 1, Verona, Italy
+              .time 12.00
+          .transport
+            .bus
+          .event
+            .event-top
+              .header
+                .title Trattoria Da Ropeton
+                .address Via Fontana del Ferro, 1, Verona, Italy
+              .time 15.00
+      .map-wrapper
+        #map
+    = Haml::Engine.new(File.read('./includes/footer.haml')).render

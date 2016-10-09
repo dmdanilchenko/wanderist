@@ -1,0 +1,107 @@
+﻿!!!5
+%html
+  = Haml::Engine.new(File.read('./includes/head.haml')).render(Object.new, :title=>"Главная страница")
+  %body.page-overview
+    = Haml::Engine.new(File.read('./includes/header.haml')).render
+    #wrapper
+      .top-content-wrapper
+        .container
+          .row
+            .col-xs-12.titles
+              %h4 Itinerary
+              %h1 Trip to Fabulous Las Vegas
+              .info
+                %span 2 Days
+                .label.family
+                  %span family
+                .label.foodie
+                  %span foodie
+                .label.shopping
+                  %span shopping
+                .label.pet
+                  %span pet frienty
+      .content-wrapper
+        .container
+          .article-overview
+            .row
+              .col-sm-5.col-xs-12
+                .expert-wrapper
+                  .expert-top
+                    .avatar
+                    .headings
+                      %h5.title Local Expert
+                      %p.name Audrey Tautou
+                      .stars-wrapper
+                        .star.yellow
+                        .star.yellow
+                        .star.yellow
+                        .star
+                        .star
+                  .expert-bottom
+                    .type
+                      .left Budget
+                      .percentage
+                        .percentage-inner.per-55
+                      .right Luxury
+                    .type
+                      .left Relaxed
+                      .percentage
+                        .percentage-inner.per-70
+                      .right Active
+                    .type
+                      .left Desolate
+                      .percentage
+                        .percentage-inner.per-35
+                      .right Crowdy
+              .col-sm-7.col-xs-12
+                %h5.article-title Overview
+                %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui.Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna. Aenean velit odio, elementum in tempus... ut, vehicula eu diam.Pellentesque rhoncus aliquam mattis. Ut vulputate eros sed felis sodales nec vulputate justo hendrerit. Vivamus varius pretium ligula, a aliquam odio euismod sit amet. Quisque laoreet sem sit amet orci ullamcorper at ultricies metus viverra. Pellentesque arcu mauris, malesuada quis ornare accumsan, blandit sed diam.
+                .show-more
+          .accordion-overview
+            .day-wrapper
+              %input#ac-1{:name=>"accordion-1", :type=>"checkbox", :checked => true}
+              %label{:for=>"ac-1"}
+                Day 1
+                .expand
+              .tab-content
+                .map
+                .place-1
+                  .image
+                  %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit
+                  .show-on-map-wrapper
+                    %a.show-on-map{:href => "#"} Show on the map
+                .place-2
+                  .image
+                  %p Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum
+                  .show-on-map-wrapper
+                    %a.show-on-map{:href => "#"} Show on the map
+                .place-3
+                  .image
+                  %p Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna.
+                  .show-on-map-wrapper
+                    %a.show-on-map{:href => "#"} Show on the map
+                .timeline
+            .day-wrapper
+              %input#ac-2{:name=>"accordion-2", :type=>"checkbox"}
+              %label{:for=>"ac-2"}
+                Day 2
+                .expand
+              .tab-content
+                %p i want work for RubyGarage
+            .day-wrapper
+              %input#ac-3{:name=>"accordion-3", :type=>"checkbox"}
+              %label{:for=>"ac-3"}
+                Day 3
+                .expand
+              .tab-content
+                %p i want work for RubyGarage
+          .bottom-content
+            .create-contest
+              %h3.header Love this itinerary?
+              %p
+                Use it to create a new contest and local experts
+                %br/
+                will get a better sense of the trip you want
+              %button.create-contest Create A New contest
+              %a.learn-more{:href => "#"} Learn more
+    = Haml::Engine.new(File.read('./includes/footer.haml')).render

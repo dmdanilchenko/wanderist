@@ -1,0 +1,356 @@
+.page-overview
+  font-family: "Open Sans", sans-serif
+  #wrapper
+    .top-content-wrapper
+      height: 420px
+      background: url(../images/background-desktop.png) center center no-repeat
+      background-size: cover
+      .container
+        height: 100%
+        position: relative
+        .titles
+          position: absolute
+          bottom: 20px
+          color: $color4
+          h4
+            font-size: 16px
+            text-transform: uppercase
+          h1
+            font-size: 50px
+            margin-top: 10px
+            font-weight: 300
+          .info
+            >span
+              font-size: 18px
+              text-transform: uppercase
+              margin-right: 35px
+            .label
+              font-size: 16px
+              padding: 0 20px 0 40px
+              position: relative
+              border-radius: 0
+              font-weight: 100
+              &:before
+                content: ''
+                position: absolute
+                width: 20px
+                height: 20px
+                left: 10px
+                top: 3px
+              &.family
+                border-right: 1px solid $color4
+                &:before
+                  background: url(../images/family.png) center center no-repeat
+              &.foodie
+                border-right: 1px solid $color4
+                &:before
+                  background: url(../images/food.png) center center no-repeat
+              &.shopping
+                border-right: 1px solid $color4
+                &:before
+                  background: url(../images/cart.png) center center no-repeat
+              &.pet
+                &:before
+                  background: url(../images/pet.png) center center no-repeat
+    .content-wrapper
+      .article-overview
+        margin-top: 40px
+        margin-bottom: 50px
+        .expert-wrapper
+          .expert-top
+            width: 100%
+            height: 80px
+            .avatar
+              margin-right: 20px
+              float: left
+              width: 80px
+              height: 80px
+              background: url(../images/expert.png) center center no-repeat
+              border-radius: 5px
+            .headings
+              float: left
+              h5.title
+                margin-top: 0
+                font-weight: bold
+              .name
+                margin: 0
+              .stars-wrapper
+                .star
+                  float: left
+                  width: 15px
+                  height: 15px
+                  background: url(../images/star-white.png) center center no-repeat
+                  background-size: 13px
+                  &.yellow
+                    background: url(../images/star-yellow.png) center center no-repeat
+                    background-size: 13px
+          .expert-bottom
+            .type
+              height: 20px
+              margin-top: 20px
+              .left
+                width: 20%
+                float: left
+              .percentage
+                width: 60%
+                height: 10px
+                margin: 5px 0
+                border: 1px solid $color7
+                border-radius: 5px
+                float: left
+                .percentage-inner
+                  margin: 1px
+                  height: 6px
+                  background: $color8
+                  -webkit-border-top-left-radius: 3px
+                  -webkit-border-bottom-left-radius: 3px
+                  -moz-border-radius-topleft: 3px
+                  -moz-border-radius-bottomleft: 3px
+                  border-top-left-radius: 3px
+                  border-bottom-left-radius: 3px
+                  &.per-55
+                    width: 55%
+                  &.per-70
+                    width: 70%
+                  &.per-35
+                    width: 35%
+              .right
+                width: 20%
+                float: right
+                text-align: right
+        h5.article-title
+          margin-top: 0
+          margin-bottom: 20px
+          font-weight: bold
+        p
+          line-height: 1.5
+          margin-bottom: 0
+        .show-more
+          font: normal normal normal 20px/1 FontAwesome
+          height: 10px
+          text-align: center
+          &:after
+            color: #2158d5
+            content: "\f107"
+          &:hover
+            cursor: pointer
+
+      .accordion-overview
+        background: $color5
+        padding: 40px 0 15px
+        margin: 10px auto 40px auto
+        border: 1px solid $color6
+        border-radius: 10px
+        .day-wrapper
+          margin-top: -20px
+        input
+          display: none
+        label
+          margin-left: -1px
+          padding: 0px 20px
+          position: relative
+          z-index: 20
+          display: block
+          height: 70px
+          cursor: pointer
+          text-shadow: 1px 1px 1px rgba(255,255,255,0.8)
+          font-size: 20px
+          background: url(../images/ribbon.png) center center no-repeat
+          line-height: 55px
+          text-align: center
+          color: inherit
+          .expand
+            width: 30px
+            height: 30px
+            position: absolute
+            background-color: $color4
+            border: 2px solid $color15
+            border-radius: 15px
+            display: block
+            line-height: 26px
+            top: 50%
+            right: 60px
+            margin-top: -20px
+            font: normal normal normal 20px/1 FontAwesome
+            &:before
+              content: "\f107"
+              position: absolute
+              left: 7px
+              top: 4px
+        input:checked + label
+          .expand
+            &:before
+              content: "\f106"
+              left: 7px
+              top: 2px
+        label:hover:after,
+        input:checked + label:hover:after
+          content: ''
+          position: absolute
+          width: 24px
+          height: 24px
+          right: 13px
+          top: 7px
+        input:checked + label:hover:after
+
+        .tab-content
+          margin-top: -1px
+          overflow: hidden
+          height: 0px
+          position: relative
+          z-index: 10
+          -webkit-transition: height 0.3s ease-in-out, box-shadow 0.6s linear
+          -moz-transition: height 0.3s ease-in-out, box-shadow 0.6s linear
+          -o-transition: height 0.3s ease-in-out, box-shadow 0.6s linear
+          -ms-transition: height 0.3s ease-in-out, box-shadow 0.6s linear
+          transition: height 0.3s ease-in-out, box-shadow 0.6s linear
+          >div
+            position: absolute
+            width: 36%
+            border-radius: 10px
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1)
+            border: 1px solid #e4e3d2
+            .image
+              background-size: cover
+              -webkit-border-top-left-radius: 10px
+              -webkit-border-top-right-radius: 10px
+              -moz-border-radius-topleft: 10px
+              -moz-border-radius-topright: 10px
+              border-top-left-radius: 10px
+              border-top-right-radius: 10px
+            > p
+              padding: 15px 20px 5px
+              line-height: 1.2
+            .show-on-map-wrapper
+              height: 50px
+              background: url(../images/ribbon-small.png) center center no-repeat
+              background-size: cover
+              .show-on-map
+                font-size: 14px
+                font-weight: 400
+                color: $color14
+                display: block
+                line-height: 42px
+                position: relative
+                padding-left: 37px
+                &:before
+                  content: ""
+                  background: url(../images/pin-map.png) center center no-repeat
+                  background-size: 10px
+                  width: 10px
+                  height: 15px
+                  display: block
+                  position: absolute
+                  top: 50%
+                  left: 20px
+                  margin-top: -7.5px
+                &:hover,
+                &:focus
+                  text-decoration: none
+                  color: inherit
+          .map
+            height: 220px
+            background: $color4
+            left: 6%
+            top: 25px
+            background: url(../images/map.png) center center no-repeat
+          .place-1
+            height: 305px
+            background: $color4
+            right: 6%
+            top: 25px
+            .image
+              height: 180px
+              background: url(../images/las-vegas.png) center center no-repeat
+          .place-2
+            height: 340px
+            background: $color4
+            left: 6%
+            bottom: 40px
+            .image
+              height: 182px
+              background: url(../images/las-vegas-2.png) center center no-repeat
+          .place-3
+            height: 265px
+            background: $color4
+            right: 6%
+            bottom: 40px
+            .image
+              height: 138px
+              background: url(../images/las-vegas-3.png) center center no-repeat
+          .timeline
+            width: 94px
+            top: 40px
+            bottom: 40px
+            left: 45%
+            background: url(../images/timeline-desktop.png) center center no-repeat
+            box-shadow: none
+            border: none
+        input:checked ~ .tab-content
+          -webkit-transition: height 0.3s ease-in-out, box-shadow 0.6s linear
+          -moz-transition: height 0.3s ease-in-out, box-shadow 0.6s linear
+          -o-transition: height 0.3s ease-in-out, box-shadow 0.6s linear
+          -ms-transition: height 0.3s ease-in-out, box-shadow 0.6s linear
+          transition: height 0.3s ease-in-out, box-shadow 0.6s linear
+          height: 670px
+      .bottom-content
+        position: relative
+        max-width: 370px
+        margin: auto
+        text-align: center
+        padding-top: 80px
+        padding-bottom: 100px
+        &:before
+          content: ''
+          background: url(../images/route.png) center center no-repeat
+          width: 193px
+          height: 74px
+          display: block
+          position: absolute
+          top: 0px
+          left: 50%
+          right: 0
+          margin-left: -96.5px
+        .create-contest
+          h3.header
+            font-size: 20px
+            font-weight: 600
+            color: $color11
+            margin-bottom: 20px
+            background: none
+            height: auto
+          p
+            font-size: 14px
+            font-weight: 400
+            color: #3d380a
+            line-height: 18px
+            margin-bottom: 28px
+          .create-contest
+            padding: 0 30px
+            font-size: 16px
+            font-weight: 400
+            color: $color11
+            background-color: $color10
+            border: none
+            border-bottom: 2px solid $color12
+            border-radius: 6px
+            line-height: 50px
+            text-transform: uppercase
+            letter-spacing: 1px
+            &:hover
+              opacity: 0.8
+            &:active
+              border-bottom: none
+              border-top: 2px solid $color12
+              background-color: $color13
+            &:focus
+              outline: none
+          .learn-more
+            font-size: 11px
+            font-weight: 400
+            color: $color11
+            text-transform: uppercase
+            text-decoration: underline
+            margin-left: 25px
+            &:hover
+              text-decoration: none
