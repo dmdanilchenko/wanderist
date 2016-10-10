@@ -254,6 +254,7 @@
             left: 6%
             top: 25px
             background: url(../images/map.png) center center no-repeat
+            background-size: cover
           .place-1
             height: 305px
             background: $color4
@@ -262,6 +263,7 @@
             .image
               height: 180px
               background: url(../images/las-vegas.png) center center no-repeat
+              background-size: cover
           .place-2
             height: 340px
             background: $color4
@@ -270,6 +272,7 @@
             .image
               height: 182px
               background: url(../images/las-vegas-2.png) center center no-repeat
+              background-size: cover
           .place-3
             height: 265px
             background: $color4
@@ -278,6 +281,7 @@
             .image
               height: 138px
               background: url(../images/las-vegas-3.png) center center no-repeat
+              background-size: cover
           .timeline
             width: 94px
             top: 40px
@@ -354,3 +358,330 @@
             margin-left: 25px
             &:hover
               text-decoration: none
+
+@media (max-width: 700px)
+  .page-overview
+    #wrapper
+      .top-content-wrapper
+        background: url(../images/background-mobile.png) center center no-repeat
+        background-size: cover
+        .container
+          .titles
+            h4
+              font-size: 3vw
+            h1
+              font-size: 9.5vw
+              font-weight: 400
+              margin-bottom: 20px
+            .info
+              >span
+                font-size: 3vw
+                margin-right: 0px
+              .label
+                font-size: 3.5vw
+                padding: 0 30px 0 30px
+                span
+                  display: none
+                &:before
+                  left: 18px
+                &.family
+                  &:before
+                &.foodie
+                  &:before
+                &.shopping
+                  &:before
+                &.pet
+                  &:before
+      .content-wrapper
+        .article-overview
+          .expert-wrapper
+            .expert-top
+              height: 100px
+              .avatar
+                width: 100px
+                height: 100px
+                background-size: cover
+                border-radius: 5px
+              .headings
+                h5.title
+                  font-size: 3vw
+                  color: #a1a094
+                  font-weight: 400
+                  margin: 0
+                .name
+                  font-size: 4.5vw
+                  font-weight: 400
+                .stars-wrapper
+                  .star
+                    background-size: 20px
+                    width: 22px
+                    height: 20px
+                    &.yellow
+                      background-size: 20px
+            .expert-bottom
+              .type
+                font-size: 4vw
+                height: 30px
+                .left
+                .percentage
+                  margin: 10px 0
+                  .percentage-inner
+                    &.per-55
+                    &.per-70
+                    &.per-35
+                .right
+          h5.article-title
+            font-size: 4.5vw
+            margin-top: 40px
+            margin-bottom: 10px
+          p
+            font-size: 3vw
+          .show-more
+            &:after
+            &:hover
+        .accordion-overview
+          .day-wrapper
+            margin-top: -28px
+          input
+          label
+            font-size: 3.5vw
+            height: 100px
+            background-size: cover
+            line-height: 84px
+            .expand
+              width: 40px
+              height: 40px
+              position: absolute
+              background-color: #fff
+              border: 2px solid #fede06
+              border-radius: 20px
+              display: block
+              line-height: 26px
+              top: 50%
+              right: 25px
+              margin-top: -25px
+              font: normal normal normal 4vw/1 FontAwesome
+              &:before
+                left: 9px
+          input:checked + label
+            .expand
+              &:before
+                left: 9px
+          label:hover:after,
+          input:checked + label:hover:after
+          input:checked + label:hover:after
+
+          .tab-content
+            >div
+              margin-top: 30px
+              position: static
+              width: 75%
+              margin-left: 22%
+              .image
+                background-size: cover
+              > p
+                font-size: 3vw
+              .show-on-map-wrapper
+                display: none
+            .map
+              margin-left: 3%
+              width: 94%
+              height: 420px
+              background: url(../images/map-mobile.png) center center no-repeat
+              background-size: cover
+            .place-1
+              height: 420px
+              .image
+                height: 315px
+            .place-2
+              height: 420px
+              .image
+                height: 290px
+            .place-3
+              height: 380px
+              .image
+                height: 290px
+            .timeline
+              margin-left: 2%
+              position: absolute
+              background: url(../images/timeline-mobile.png) center center no-repeat
+              left: 0
+              top: 450px
+              bottom: 0
+          input:checked ~ .tab-content
+            height: 1800px
+        .bottom-content
+          max-width: 400px
+          padding-top: 160px
+          &:before
+            background: url(../images/route-mobile.png) center center no-repeat
+            width: 400px
+            height: 150px
+            margin-left: -200px
+          .create-contest
+            h3.header
+              font-size: 4.5vw
+            p
+              font-size: 3vw
+            .create-contest
+              font-size: 3.5vw
+              line-height: 60px
+            .learn-more
+              display: none
+
+@media (max-width: 450px)
+  .page-overview
+    #wrapper
+      .top-content-wrapper
+        background: url(../images/background-mobile.png) center center no-repeat
+        background-size: cover
+        height: 300px
+        .container
+          .titles
+            h4
+            h1
+              font-weight: 400
+              margin-bottom: 10px
+            .info
+              >span
+                margin-right: 0px
+              .label
+                padding: 0 30px 0 30px
+                span
+                  display: none
+                &:before
+                  left: 18px
+                &.family
+                  &:before
+                &.foodie
+                  &:before
+                &.shopping
+                  &:before
+                &.pet
+                  &:before
+      .content-wrapper
+        .article-overview
+          margin-top: 20px
+          margin-bottom: 25px
+          .expert-wrapper
+            .expert-top
+              height: 60px
+              .avatar
+                width: 60px
+                height: 60px
+                background-size: cover
+                border-radius: 5px
+              .headings
+                h5.title
+                  color: #a1a094
+                  font-weight: 400
+                  margin: 0
+                .name
+                  font-weight: 400
+                .stars-wrapper
+                  .star
+                    background-size: 13px
+                    width: 15px
+                    height: 14px
+                    &.yellow
+                      background-size: 13px
+            .expert-bottom
+              .type
+                height: 20px
+                margin-top: 15px
+                .left
+                .percentage
+                  margin: 4px 0
+                  .percentage-inner
+                    &.per-55
+                    &.per-70
+                    &.per-35
+                .right
+          h5.article-title
+            font-size: 4.5vw
+            margin-top: 20px
+            margin-bottom: 5px
+          p
+            font-size: 3vw
+          .show-more
+            &:after
+            &:hover
+        .accordion-overview
+          padding: 30px 0 5px
+          .day-wrapper
+            margin-top: -18px
+          input
+          label
+            height: 60px
+            line-height: 50px
+            .expand
+              width: 25px
+              height: 25px
+              border: 1px solid #fede06
+              line-height: 26px
+              margin-top: -16px
+              &:before
+                left: 6px
+                top: -2px
+          input:checked + label
+            .expand
+              &:before
+                left: 6px
+                top: -2px
+          label:hover:after,
+          input:checked + label:hover:after
+          input:checked + label:hover:after
+
+          .tab-content
+            >div
+              margin-top: 15px
+              .image
+                background-size: cover
+              > p
+                font-size: 3vw
+              .show-on-map-wrapper
+                display: none
+            .map
+              margin-left: 3%
+              width: 94%
+              height: 250px
+              background: url(../images/map-mobile.png) center center no-repeat
+              background-size: cover
+            .place-1
+              height: 250px
+              .image
+                height: 180px
+            .place-2
+              height: 250px
+              .image
+                height: 150px
+            .place-3
+              height: 250px
+              .image
+                height: 150px
+            .timeline
+              margin-left: -2%
+              background-size: 36%
+              top: 200px
+          input:checked ~ .tab-content
+            height: 1100px
+        .bottom-content
+          max-width: 400px
+          padding-top: 100px
+          padding-bottom: 50px
+          &:before
+            background: url(../images/route-mobile.png) center center no-repeat
+            background-size: 80%
+            width: 300px
+            height: 100px
+            margin-left: -150px
+          .create-contest
+            h3.header
+              font-size: 4.5vw
+            p
+              font-size: 3vw
+            .create-contest
+              line-height: 40px
+              border-radius: 4px
+            .learn-more
+              display: none

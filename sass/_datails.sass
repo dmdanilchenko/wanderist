@@ -9,12 +9,23 @@
       height: 100%
       box-sizing: border-box
       margin-left: 0
-      -moz-transition: margin-left 0.3s ease-in
-      -o-transition: margin-left 0.3s ease-in
-      -webkit-transition: margin-left 0.3s ease-in
-      transition: margin-left 0.3s ease-in
+      left: 0
+      -moz-transition: left 0.3s ease-in
+      -o-transition: left 0.3s ease-in
+      -webkit-transition: left 0.3s ease-in
+      transition: left 0.3s ease-in
       border-right: none
+      &.hidden-sidebar
+        left: -554px
+        border-right: 6px solid $color10
+        a.toggle-sidebar
+          &:before
+            content: "\f105"
+            color: $color1
+            font: normal normal normal 28px/1 FontAwesome
       a.toggle-sidebar
+        height: 43px
+        width: 35px
         position: absolute
         top: 33px
         right: -35px
@@ -24,7 +35,12 @@
         border-bottom-right-radius: 6px
         padding: 7px 11px 8px 14px
         display: inline-block
-        box-shadow: rgba(223, 196, 10, 0.8) 0px 2px 1px
+        box-shadow: rgba(223, 196, 10, 0.8) 0px 3px 1px
+        text-decoration: none
+        &:before
+          content: "\f104"
+          color: $color1
+          font: normal normal normal 28px/1 FontAwesome
       .sidebar
         height: 100%
         background-color: $color17
@@ -40,15 +56,19 @@
             font: normal normal normal 20px/1 FontAwesome
             &.arrow-prev
               margin-left: 5%
+              float: left
               &:before
                 content: "\f104"
             &.arrow-next
               margin-right: 5%
+              float: right
               &:before
                 content: "\f105"
           ul.date-select
             width: 75%
+            height: 30px
             margin: 0 auto
+            padding: 0
             li
               list-style: none
               float: left
@@ -63,6 +83,8 @@
                 border: 1px solid $color10
                 background-color: $color4
                 text-align: center
+                &:hover
+                  background-color: $color10
                 &.date-1
                   border-top-left-radius: 5px
                   border-bottom-left-radius: 5px
@@ -74,6 +96,8 @@
                   border-bottom-right-radius: 5px
                 &.active
                   background-color: $color10
+                &:hover
+                  text-decoration: none
         .event
           background-color: $color4
           border: 1px solid $color6
@@ -81,28 +105,49 @@
           box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1)
           padding: 20px 0
           .event-top
+            height: 45px
             padding: 0 18px 0px 40px
             .header
               float: left
               background: none
+              position: relative
+              &:before
+                content: ""
+                position: absolute
+                left: -32px
+                top: 5px
+                width: 20px
+                height: 18px
               .title
                 font-size: 20px
                 font-weight: 400
                 color: $color1
-                position: relative
               .address
                 font-size: 14px
                 font-weight: 400
                 color: $color18
-                margin-top: 10px
+                margin-top: -3px
             .time
               float: right
               font-size: 14px
               font-weight: 400
               color: $color1
-              font: normal normal normal 16px/1 FontAwesome
               &:before
                 content: "\f017"
+                font: normal normal normal 16px/1 FontAwesome
+                margin-right: 5px
+            &.food
+              .header
+                &:before
+                  background: url(../images/food-dark.png) center center no-repeat
+            &.shopping
+              .header
+                &:before
+                  background: url(../images/cart-dark.png) center center no-repeat
+            &.pet
+              .header
+                &:before
+                  background: url(../images/pet-dark.png) center center no-repeat
           .image
             width: 100%
             height: 260px
@@ -115,6 +160,15 @@
             color: $color1
             margin: 20px 20px 0
             line-height: 16px
+            .show-more
+              font: normal normal normal 20px/1 FontAwesome
+              height: 10px
+              text-align: center
+              &:after
+                color: $color19
+                content: "\f106"
+              &:hover
+                cursor: pointer
           .show-more
         .transport
           width: 40px
@@ -145,11 +199,181 @@
           > div
             font: normal normal normal 14px/1 FontAwesome
             line-height: 38px
-          &.taxi
+          .taxi
             &:before
               content: "\f1b9"
-          &.bus
+          .bus
             &:before
               content: "\f207"
+    .map-wrapper
+      height: 100%
+      margin-left: 560px
+      position: relative
+      box-sizing: border-box
+      -moz-transition: margin-left 0.3s ease-in
+      -o-transition: margin-left 0.3s ease-in
+      -webkit-transition: margin-left 0.3s ease-in
+      transition: margin-left 0.3s ease-in
+      &.hidden-sidebar
+        margin-left: 6px
+      #map
+        height: 100%
+        width: 100%
+
+@media (max-width: 700px)
+  .page-details
+    #wrapper
+      .sidebar-wrapper
+        width: 100%
+        &.hidden-sidebar
+          left: -99%
+          a.toggle-sidebar
+            right: -47px
+            border-top-left-radius: 0
+            border-bottom-left-radius: 0
+            border-top-right-radius: 6px
+            border-bottom-right-radius: 6px
+            &:before
+              font: normal normal normal 5.5vw/1 FontAwesome
+        a.toggle-sidebar
+          right: 0px
+          border-top-left-radius: 6px
+          border-bottom-left-radius: 6px
+          border-top-right-radius: 0
+          border-bottom-right-radius: 0
+          height: 60px
+          width: 47px
+          padding: 12px 11px 8px 14px
+          &:before
+            font: normal normal normal 5.5vw/1 FontAwesome
+        .sidebar
+          padding: 50px 3%
+          .date-wrapper
+            width: 90%
+            margin-bottom: 60px
+            >a
+              font: normal normal normal 4.5vw/1 FontAwesome
+              &.arrow-prev
+              &.arrow-next
+            ul.date-select
+              li
+                a
+                  font-size: 3vw
+                  line-height: 2
+                  &:hover
+                  &.date-1
+                  &.date-2
+                  &.date-3
+          .event
+            .event-top
+              .header
+                &:before
+                .title
+                  font-size: 4vw
+                .address
+                  font-size: 3vw
+              .time
+                font-size: 3vw
+              &.food
+                .header
+              &.shopping
+                .header
+              &.pet
+                .header
+            .image
+              height: 330px
+            .description
+              font-size: 3vw
+              .show-more
+            .show-more
+          .transport
+            width: 55px
+            height: 55px
+            border: 2px solid #ffdf06
+            border-radius: 30px
+            margin: 20px 0
+            &:before
+              width: 2px
+            &:after
+              width: 2px
+            > div
+              font: normal normal normal 4vw/1 FontAwesome
+              line-height: 2
+            .taxi
+            .bus
       .map-wrapper
+        margin-left: 100%
+        &.hidden-sidebar
+        #map
+
+@media (max-width: 450px)
+  .page-details
+    #wrapper
+      .sidebar-wrapper
+        width: 100%
+        &.hidden-sidebar
+          left: -99%
+          a.toggle-sidebar
+            right: -35px
+        a.toggle-sidebar
+          top: 20px
+          right: 0px
+          height: 40px
+          width: 35px
+          padding: 10px 11px 8px 14px
+        .sidebar
+          padding: 25px 3%
+          .date-wrapper
+            width: 90%
+            margin-bottom: 30px
+            >a
+              font: normal normal normal 4.5vw/1 FontAwesome
+              &.arrow-prev
+              &.arrow-next
+            ul.date-select
+              li
+                a
+                  line-height: 2
+                  &:hover
+                  &.date-1
+                  &.date-2
+                  &.date-3
+          .event
+            padding: 10px 0
+            .event-top
+              .header
+                height: auto
+                &:before
+                .title
+                .address
+              .time
+              &.food
+                .header
+              &.shopping
+                .header
+              &.pet
+                .header
+            .image
+              height: 250px
+              margin-top: 5px
+            .description
+              .show-more
+            .show-more
+          .transport
+            width: 35px
+            height: 35px
+            border: 1px solid #ffdf06
+            border-radius: 30px
+            &:before
+              width: 1px
+            &:after
+              width: 1px
+            > div
+              font: normal normal normal 4vw/1 FontAwesome
+              line-height: 2
+            .taxi
+            .bus
+      .map-wrapper
+        margin-left: 100%
+        &.hidden-sidebar
         #map

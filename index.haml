@@ -1,6 +1,6 @@
 ﻿!!!5
 %html
-  = Haml::Engine.new(File.read('./includes/head.haml')).render(Object.new, :title=>"Главная страница")
+  = Haml::Engine.new(File.read('./includes/head.haml')).render(Object.new, :title=>"Overview")
   %body.page-overview
     = Haml::Engine.new(File.read('./includes/header.haml')).render
     #wrapper
