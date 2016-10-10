@@ -1,10 +1,69 @@
-.header
+.page-header
   .top-menu
     .main-menu
       .hamburger
         .line
         .line
         .line
+      .menu-content-wrapper
+        .menu-content
+          .link-content
+            %a.close-menu{:href => "#"}
+            %a.logo{:href => "index.html"}
+            %a.itineraries{:href => "#"} Itineraries
+            %a.contests{:href => "#"} Contests
+            .account-block
+              .account-head
+                .avatar
+                .user-name John Kennedy
+              %a.my-itineraries{:href => "#"} My Itineraries
+              %a.my-contests{:href => "#"} My Contests
+              %a.my-settings{:href => "#"} Settings
+              %a.my-payments{:href => "#"} Payments
+              %a.logout{:href => "#"} Log out
+            .messages-block
+              Messages
+              .qty 13
+          .info-block
+            .block
+              %h5.title Contest
+              .event
+                Weekend in Verona from Trento
+                .qty +1
+              .event
+                The journey to the Old World – Prague, Czech Republic
+                .qty +2
+              .event
+                Weekend in Verona from Trento
+                .qty
+            .block
+              %h5.title Itineraries
+              .event
+                Italian Masterpiece
+                .qty +2
+              .event
+                Weekend in Verona from Trento
+                .qty +1
+              .event
+                Romantic journey to Northern Italy
+                .qty
+              .event
+                The journey to the Old World – Prague, Czech Republic
+                .qty
+            .block
+              %h5.title Ruby Garage
+              .event
+                Web Development
+                .qty +5
+              .event
+                Mobile Development
+                .qty +5
+              .event
+                UI/UX Design
+                .qty +5
+              .event
+                Additional Services
+                .qty
     %ul.top-links
       - @menu_items = {'index' => 'Overview', 'details' => 'Details'};
       - @menu_items.each do |key, value|

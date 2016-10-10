@@ -169,7 +169,6 @@
                 content: "\f106"
               &:hover
                 cursor: pointer
-          .show-more
         .transport
           width: 40px
           height: 40px
@@ -223,6 +222,7 @@
 @media (max-width: 700px)
   .page-details
     #wrapper
+      min-width: 450px
       .sidebar-wrapper
         width: 100%
         &.hidden-sidebar
@@ -253,39 +253,24 @@
             margin-bottom: 60px
             >a
               font: normal normal normal 4.5vw/1 FontAwesome
-              &.arrow-prev
-              &.arrow-next
             ul.date-select
               li
                 a
                   font-size: 3vw
                   line-height: 2
-                  &:hover
-                  &.date-1
-                  &.date-2
-                  &.date-3
           .event
             .event-top
               .header
-                &:before
                 .title
                   font-size: 4vw
                 .address
                   font-size: 3vw
               .time
                 font-size: 3vw
-              &.food
-                .header
-              &.shopping
-                .header
-              &.pet
-                .header
             .image
               height: 330px
             .description
               font-size: 3vw
-              .show-more
-            .show-more
           .transport
             width: 55px
             height: 55px
@@ -299,16 +284,13 @@
             > div
               font: normal normal normal 4vw/1 FontAwesome
               line-height: 2
-            .taxi
-            .bus
       .map-wrapper
         margin-left: 100%
-        &.hidden-sidebar
-        #map
 
 @media (max-width: 450px)
   .page-details
     #wrapper
+      min-width: 320px
       .sidebar-wrapper
         width: 100%
         &.hidden-sidebar
@@ -328,37 +310,18 @@
             margin-bottom: 30px
             >a
               font: normal normal normal 4.5vw/1 FontAwesome
-              &.arrow-prev
-              &.arrow-next
             ul.date-select
               li
                 a
                   line-height: 2
-                  &:hover
-                  &.date-1
-                  &.date-2
-                  &.date-3
           .event
             padding: 10px 0
             .event-top
               .header
                 height: auto
-                &:before
-                .title
-                .address
-              .time
-              &.food
-                .header
-              &.shopping
-                .header
-              &.pet
-                .header
             .image
               height: 250px
               margin-top: 5px
-            .description
-              .show-more
-            .show-more
           .transport
             width: 35px
             height: 35px
@@ -371,9 +334,5 @@
             > div
               font: normal normal normal 4vw/1 FontAwesome
               line-height: 2
-            .taxi
-            .bus
       .map-wrapper
         margin-left: 100%
-        &.hidden-sidebar
-        #map

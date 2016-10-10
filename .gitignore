@@ -1,4 +1,6 @@
 /.idea
 /.sass-cache
+.map
+/includes/*.html
 
 

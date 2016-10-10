@@ -1,6 +1,11 @@
-.header
+.page-header
   background: #c8b485
   height: 60px
+  padding-bottom: 0
+  margin: 0
+  border: none
+  &.menu-open
+    margin-left: 340px
   .top-menu
     float: left
     height: 100%
@@ -13,20 +18,199 @@
       border-right: 1px solid $color2
       &:hover
         background-color: $color16
-        cursor: pointer
         .hamburger
-          margin: 18px 20px
+          cursor: pointer
+          padding: 18px 20px
           .line
             margin-bottom: 7px
       .hamburger
-        width: 30px
-        height: 23px
-        margin: 20px
+        width: 70px
+        height: 60px
+        padding: 20px
         .line
           width: 100%
           height: 3px
           margin-bottom: 5px
           background: $color3
+      .menu-content-wrapper
+        &.menu-open
+          display: block
+          .menu-content
+            left: 0
+        display: none
+        position: fixed
+        top: 0
+        bottom: 0
+        left: 0
+        right: 0
+        width: 100%
+        height: 100%
+        background-color: rgba(1, 1, 1, 0.8)
+        z-index: 999
+        .menu-content
+          position: relative
+          width: 340px
+          height: 100%
+          background: #786a46
+          left: -340px
+          -moz-transition: left 0.3s ease-in
+          -o-transition: left 0.3s ease-in
+          -webkit-transition: left 0.3s ease-in
+          transition: left 0.3s ease-in
+          .link-content
+            a
+              display: block
+              color: #d6d2cc
+              text-decoration: none
+              padding-left: 100px
+              font-weight: 100
+              &.close-menu
+                width: 70px
+                height: 60px
+                position: absolute
+                right: -70px
+                background: #a42338
+                border-bottom: 3px solid #851d2e
+                padding-left: 0
+                &:before
+                  content: "\f00d"
+                  color: #fff
+                  font: normal normal normal 30px/1 FontAwesome
+                  margin: 14px 23px
+                  position: absolute
+              &.logo
+                height: 60px
+                background: url(../images/logo.png) 30px center no-repeat #4c412d
+                background-size: 50%
+              &.itineraries
+                position: relative
+                line-height: 60px
+                font-size: 18px
+                border-bottom: 1px solid #483e2a
+                background: -webkit-linear-gradient(top, rgba(77, 66, 50, 1), rgba(83, 71, 52, 1))
+                &:after
+                  content: ''
+                  position: absolute
+                  background: url(../images/plane.png) center center no-repeat
+                  width: 25px
+                  height: 25px
+                  background-size: 25px
+                  left: 38px
+                  top: 19px
+              &.contests
+                position: relative
+                line-height: 60px
+                font-size: 18px
+                border-bottom: 1px solid #50452e
+                background: -webkit-linear-gradient(top, rgba(83, 71, 52, 1), rgba(98, 83, 57, 1))
+                &:after
+                  content: ''
+                  position: absolute
+                  background: url(../images/contests.png) center center no-repeat
+                  width: 25px
+                  height: 25px
+                  background-size: 25px
+                  left: 38px
+                  top: 19px
+            .account-block
+              border-bottom: 1px solid #5d5136
+              background: -webkit-linear-gradient(top, rgba(98, 83, 57, 1), rgba(121, 106, 71, 1))
+              .account-head
+                height: 60px
+                .avatar
+                  height: 100%
+                  width: 100px
+                  float: left
+                  background: url(../images/avatar.png) center center no-repeat
+                  background-size: 40px
+                .user-name
+                  line-height: 60px
+                  color: #d6d2cc
+                  font-size: 16px
+                  font-weight: 100
+              a
+                position: relative
+                line-height: 40px
+                font-size: 14px
+                color: #a39b8b
+                &:after
+                  content: ''
+                  position: absolute
+                  width: 25px
+                  height: 25px
+                  left: 38px
+                  top: 7px
+                &.my-itineraries
+                  &:after
+                    background: url(../images/myplane.png) center center no-repeat
+                    background-size: 12px
+                &.my-contests
+                  &:after
+                    background: url(../images/mycontests.png) center center no-repeat
+                    background-size: 12px
+                &.my-settings
+                  &:after
+                    background: url(../images/settings.png) center center no-repeat
+                    background-size: 12px
+                &.my-payments
+                  &:after
+                    background: url(../images/payments.png) center center no-repeat
+                    background-size: 12px
+                &.logout
+                  &:after
+                    background: url(../images/logout.png) center center no-repeat
+                    background-size: 12px
+            .messages-block
+              line-height: 60px
+              padding-left: 100px
+              color: #d6d2cc
+              font-size: 18px
+              font-weight: 100
+              position: relative
+              cursor: pointer
+              border-bottom: 1px solid #514730
+              background: -webkit-linear-gradient(top, rgba(121, 106, 71, 1), rgba(115, 100, 68, 1))
+              &:after
+                content: ''
+                position: absolute
+                background: url(../images/messages.png) center center no-repeat
+                width: 25px
+                height: 25px
+                background-size: 25px
+                left: 38px
+                top: 19px
+              .qty
+                position: absolute
+                right: 20px
+                top: 50%
+                height: 14px
+                width: 22px
+                line-height: 14px
+                margin-top: -7px
+                font-size: 10px
+                font-weight: bold
+                color: #453c25
+                background: #ffdf06
+                border-radius: 10px
+                text-align: center
+          .info-block
+            overflow-y: scroll
+            background: #584d38
+            .block
+              padding-left: 40px
+              padding-right: 70px
+              border-bottom: 1px solid #5e543c
+              h5.title
+                line-height: 30px
+              .event
+                position: relative
+                padding-bottom: 20px
+                color: #a1a094
+                .qty
+                  position: absolute
+                  right: -50px
+                  top: 0
+                  color: #ffdf06
     ul.top-links
       float: left
       height: 100%
@@ -85,21 +269,25 @@
         opacity: 0.8
 
 @media (max-width: 700px)
-  .header
+  .page-header
     position: relative
     .top-menu
       .main-menu
-        &:hover
-          .hamburger
-            .line
-        .hamburger
-          .line
+        .menu-content-wrapper
+          .menu-content
+            width: 85%
+            .link-content
+              a
+                &.close-menu
+                  width: 18%
+                  right: -18%
+                  &:before
+                    margin: 14px 30%
       ul.top-links
         li
           .link
             font-size: 4vw
             padding: 15px 20px 15px 50px
-            &:before
             &:hover
               padding: 15px  20px 15px 50px
     .right-links
@@ -113,27 +301,18 @@
       .facebook
         width: 50px
         background: url(../images/facebook-white-big.png) center center no-repeat
-        &:hover
       .twitter
         width: 50px
         background: url(../images/twitter-white-big.png) center center no-repeat
-        &:hover
 @media (max-width: 450px)
-  .header
+  .page-header
     position: relative
     .top-menu
-      .main-menu
-        &:hover
-          .hamburger
-            .line
-        .hamburger
-          .line
       ul.top-links
         li
           .link
             font-size: 4vw
             padding: 15px 20px 15px 50px
-            &:before
             &:hover
               padding: 15px  20px 15px 50px
     .right-links
@@ -145,8 +324,6 @@
       .facebook
         width: 25px
         background-size: 25px
-        &:hover
       .twitter
         width: 25px
         background-size: 25px
-        &:hover
